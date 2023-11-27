@@ -1,5 +1,8 @@
-name : Regression testing
-on : push
+name : sanity testing
+on :
+  push :
+    branches:
+       - master
 jobs:
    cypress-run:
       runs-on: windows-latest
@@ -9,3 +12,5 @@ jobs:
  
        - name : Cypress run
          uses : cypress-io/github-action@master
+         with : 
+          command : "npm run one:test"
