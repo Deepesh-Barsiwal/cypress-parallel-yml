@@ -8,4 +8,4 @@ jobs:
          uses: actions/checkout@v4
 
        - name : Cypress run
-         uses : cypress-parallel-yml/github-actions@v6
+         uses : Deepesh-Barsiwal/cypress-parallel-yml@v6
