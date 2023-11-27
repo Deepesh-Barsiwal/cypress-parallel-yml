@@ -1,0 +1,14 @@
+{
+  "name": "cypress-parallel-with-yml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "one:test": "npx cypress run --spec 'cypress\\e2e\\one.cy.js' "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.0"
+  }
+}
