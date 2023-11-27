@@ -1,5 +1,10 @@
 name: CypressTests
-on: [push]
+on: 
+  push :
+    branches :
+      master 
+  schedule:
+    - cron: '0 0 * * *' 
 jobs:
   cypress-run:
     runs-on: windows-latest
@@ -15,14 +20,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Cypress run
-        # Uses the official Cypress GitHub action https://github.com/cypress-io/github-action
         uses: cypress-io/github-action@v6
-        with:
-          command : npx cypress run --record --key 45cd7de7-e826-4788-970e-3463846aa773 --browser ${{ matrix.browser }} --env grep=@smoke
+      - name: run parallel
+        run : npx cypress run --record --key 45cd7de7-e826-4788-970e-3463846aa773 --browser ${{ matrix.browser }} --env grep=@smoke
           # Records to Cypress Cloud 
           # https://docs.cypress.io/guides/cloud/projects#Set-up-a-project-to-record
-          record: true
-          parallel: false # Runs test in parallel using settings above
+          # record: true
+          # parallel: false # Runs test in parallel using settings above
      
         env:
           # For recording and parallelization to work you must set your CYPRESS_RECORD_KEY
