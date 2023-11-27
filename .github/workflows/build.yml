@@ -8,4 +8,5 @@ jobs:
          uses: actions/checkout@v4
 
        - name : Cypress run
-         uses : Deepesh-Barsiwal/cypress-parallel-yml
+         uses : Deepesh-Barsiwal/cypress-parallel-yml@master
+         
