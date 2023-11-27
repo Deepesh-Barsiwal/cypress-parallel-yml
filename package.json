@@ -4,11 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "one:test": "npx cypress run --spec 'cypress\\e2e\\one.cy.js' "
+    "one:test": "npx cypress run --spec 'cypress\\e2e\\one.cy.js' ",
+    "cy:run": "npx cypress run",
+    "cy:parallel": " npx cypress-parallel -s cy:run -t 3 -d 'cypress/e2e/*.cy.js'"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cypress/grep": "^4.0.1",
     "cypress": "^13.6.0"
+  },
+  "dependencies": {
+    "cypress-parallel": "^0.13.0"
   }
 }

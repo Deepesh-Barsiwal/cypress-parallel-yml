@@ -1,5 +1,6 @@
 describe('template spec', () => {
-  it('passes', () => {
+  it('@smoke passes', () => {
     cy.visit('https://example.cypress.io')
+    // tag: smoke
   })
 })
