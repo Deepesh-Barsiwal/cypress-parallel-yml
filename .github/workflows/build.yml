@@ -4,9 +4,8 @@ jobs:
    cypress-run:
       runs-on: windows-latest
       steps : 
-       - name: Checkout
-         uses: actions/checkout@v4
-
+      #  - name: Checkout
+      #    uses: actions/checkout@v4
+ 
        - name : Cypress run
          uses : Deepesh-Barsiwal/cypress-parallel-yml@master
-         
