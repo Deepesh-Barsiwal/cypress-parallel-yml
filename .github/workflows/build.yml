@@ -18,7 +18,7 @@ jobs:
         # Uses the official Cypress GitHub action https://github.com/cypress-io/github-action
         uses: cypress-io/github-action@v6
         with:
-          command : npx cypress-parallel run --record --key 45cd7de7-e826-4788-970e-3463846aa773 --parallel --browser ${{ matrix.browser }}
+          command : npx cypress run --record --key 45cd7de7-e826-4788-970e-3463846aa773 --parallel --browser ${{ matrix.browser }}
           # Records to Cypress Cloud 
           # https://docs.cypress.io/guides/cloud/projects#Set-up-a-project-to-record
           record: true
