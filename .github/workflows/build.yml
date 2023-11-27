@@ -22,7 +22,8 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with :
-          command : npx cypress run --record --key 45cd7de7-e826-4788-970e-3463846aa773 --browser ${{ matrix.browser }} --env grep=@smoke
+          command : npx cypress run --record --key 45cd7de7-e826-4788-970e-3463846aa773 --browser ${{ matrix.browser }} --env grep=@smoke --container ${{ matrix.containers }}
+
           # Records to Cypress Cloud 
           # https://docs.cypress.io/guides/cloud/projects#Set-up-a-project-to-record
           # record: true
